@@ -1,0 +1,222 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    width: 1000px;
+    margin: auto;
+    background-image: url("../image/abwall.png");
+    background-attachment: fixed;
+    background-position: auto;
+    background-image: center;
+    background-repeat: repeat;
+    font-family: monospace, "Arial Narrow",sans-serif;
+}
+header {
+    width: 100%;
+    position: sticky;
+    height: 70px;
+    width: 100%;
+    text-align: center;
+    padding:5px 5px;   
+    z-index: 1;
+    background-color:#c70505;
+}
+header h1{
+    text-align: center;
+    font-size:35px;
+    word-spacing: 40px;
+    padding-bottom: 0;
+    color: whitesmoke;
+    font-family: Georgia, Times, 'Times New Roman', sans-serif;
+}
+header img {
+    border-radius:50%;
+    float: left;
+}
+@media only screen and (min-width: 600px) {
+    nav ul {
+        display: flex;
+        flex-direction: row;
+}
+nav {
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+    position: sticky;
+    display: flex;
+    background: #c70505;
+    height: 70px;
+    width: 100%;
+    display: block; 
+    z-index: 1;
+}
+nav a:hover {
+    color:black;
+    font-style: italic;
+}
+
+nav a {
+    color:whitesmoke;
+    text-decoration: none;
+    font-size: 19px;
+}
+nav ul{
+    text-align: left;
+}
+nav li {
+    display:inline;
+    padding: 10px 40px;
+}
+ul.order {
+    display: block;
+}
+@media only screen and (min-width: 800px) {
+    main {
+        display: flex;
+        flex-direction: row;
+    }
+    aside {
+        flex: 0 0 200px;
+    }
+} 
+main {
+    display:inline-block;
+    display:flex;
+    /*border: 1px solid red;*/
+    width: 100%;
+    height: auto;
+    padding: 5px;
+}
+aside {
+    width: 360px;
+    height: auto;
+    float: right;
+    padding-left: 10px;
+}
+aside h4 {
+    border-bottom:1px red solid;
+    margin: 20px;
+    font-weight: 500;
+    font-size:20px;
+}
+aside h5{
+    border-bottom:1px red solid;
+    margin: 20px;
+    font-weight: 500;
+    font-size:20px;
+    text-align: right;
+}
+aside a {
+    color:black;
+    text-decoration:none;
+}
+
+aside div:hover {
+    color: grey;
+}
+
+section {
+width: 63%;
+height: auto;
+float: left;
+text-align: justify;
+}
+img.right {
+    float: right;
+    margin: 8px;
+    }
+img.left  {
+    float: left;
+    margin: 8px;
+} 
+section ul {
+    list-style-type:none;
+}
+section h4 {
+    border-bottom:1px red solid;
+    margin: 20px;
+    font-weight: 500;
+    font-size:20px;
+}
+main section  img:hover {	
+    opacity: 0.7;
+}
+footer {
+    border-radius: 2px;
+    position: sticky;
+    bottom: 0;
+    display: flex;
+    height:80px;
+    width: 100%;
+    background:#1d3690;
+    color: whitesmoke;
+    padding-top: -5px;
+    display: inline-block;
+}
+footer a{
+    text-decoration: underline;
+    color:whitesmoke;
+}
+footer li {
+    line-height: 1em;
+    word-spacing: 10px;
+}
+#map {
+    position: relative;
+    float: right;
+    text-align: center;
+    float: right;
+    top: 0;  
+    bottom: 0;
+    margin: 0 50px;
+    line-height: .2px;
+    margin-top:15px
+}
+#contact {
+    float: left;
+    position: absolute;
+}
+#contact ul {
+    word-spacing: 15px;
+    list-style-type: none;
+    float: left;
+    top: 0; 
+    bottom: 6px; 
+}
+.dropbtn {    
+    background-color: #4CAF50;    
+    color: white;   
+    padding: 10px;    
+    font-size: 5px;   
+    border: none;    
+    cursor: pointer;
+}
+.dropdown {    
+    position: relative;    
+    display: inline-block;
+}
+.dropdown-content {  
+    overflow:scroll;
+    display: none;    
+    position: absolute; 
+    left:20px;   
+    background-color: #c70505;    
+    min-width: 160px;    
+    box-shadow: 0px 8px 8px 0px rgba(0,0,0,0.2);    
+    z-index: 1;
+}
+.dropdown-content a {    
+    color: black;    
+    /*padding: 12px 16px;*/    
+    text-decoration: none;    
+    display: block;
+}
+.dropdown-content a:hover {
+    background-color: #f1f1f1
+}
+.dropdown:hover .dropdown-content {    
+    display: block;
+}
+.dropdown:hover .dropbtn {    
+    background-color: #3e8e41;
+}
+
