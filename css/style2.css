@@ -2,7 +2,6 @@
     box-sizing: border-box;
 }
 body {
-    width: 1000px;
     margin: auto;
     background-image: url("../image/abwall.png");
     background-attachment: fixed;
@@ -12,17 +11,16 @@ body {
     font-family: monospace, "Arial Narrow",sans-serif;
 }
 header {
-    width: 100%;
-    position: sticky;
-    height: 70px;
-    width: 100%;
+    display: flex;
     text-align: center;
+    width: 100%;
     padding:5px 5px;   
     z-index: 1;
     background-color:#c70505;
+    position: sticky;
+    top:0;
 }
 header h1{
-    text-align: center;
     font-size:35px;
     word-spacing: 40px;
     padding-bottom: 0;
@@ -33,21 +31,17 @@ header img {
     border-radius:50%;
     float: left;
 }
-@media only screen and (min-width: 600px) {
-    nav ul {
-        display: flex;
-        flex-direction: row;
-}
 nav {
+    width: 100%;
     border-bottom-left-radius: 2px;
     border-bottom-right-radius: 2px;
-    position: sticky;
-    display: flex;
+    margin-top: -16px;
     background: #c70505;
-    height: 70px;
-    width: 100%;
-    display: block; 
     z-index: 1;
+    display: flex;
+    position: sticky;
+    top:96px;
+    float: left;
 }
 nav a:hover {
     color:black;
@@ -57,6 +51,7 @@ nav a:hover {
 nav a {
     color:whitesmoke;
     text-decoration: none;
+    text-align: center;
     font-size: 19px;
 }
 nav ul{
@@ -69,28 +64,18 @@ nav li {
 ul.order {
     display: block;
 }
-@media only screen and (min-width: 800px) {
-    main {
-        display: flex;
-        flex-direction: row;
-    }
-    aside {
-        flex: 0 0 200px;
-    }
-} 
+
 main {
-    display:inline-block;
-    display:flex;
-    /*border: 1px solid red;*/
-    width: 100%;
-    height: auto;
-    padding: 5px;
-}
+        display: flex;
+        /*border: 1px solid red;*/
+        padding: 5px;
+        width: 100%;
+        float:left;
+    }
 aside {
-    width: 360px;
-    height: auto;
-    float: right;
+    float: left;
     padding-left: 10px;
+    order: 2;
 }
 aside h4 {
     border-bottom:1px red solid;
@@ -115,10 +100,9 @@ aside div:hover {
 }
 
 section {
-width: 63%;
-height: auto;
-float: left;
-text-align: justify;
+    float: left;
+    text-align: justify;
+    order:1;
 }
 img.right {
     float: right;
@@ -137,9 +121,93 @@ section h4 {
     font-weight: 500;
     font-size:20px;
 }
-main section  img:hover {	
+main section  img:hover {   
     opacity: 0.7;
 }
+.list {
+    display: flex;
+}
+@media only all and (max-width: 800px) {
+    main {
+        flex-direction: column;
+        display:flex;
+        flex-wrap: wrap;
+        height: auto;
+        width: 100%;
+        padding: 5px;
+    }
+    aside {
+        
+        height: auto;
+        float: left;
+        padding-left: 10px;
+
+        order: 2;
+    }
+    aside h4 {
+        border-bottom:1px red solid;
+        margin: 20px;
+        font-weight: 500;
+        font-size:20px;
+    }
+    aside h5{
+        border-bottom:1px red solid;
+        margin: 20px;
+        font-weight: 500;
+        font-size:20px;
+        text-align: right;
+    }
+    aside a {
+        color:black;
+        text-decoration:none;
+    }
+
+    aside div:hover {
+        color: grey;
+    }
+
+    section {
+       
+        float: left;
+        text-align: justify;
+        order: 1;
+    }
+    img.right {
+        float: right;
+        margin: 8px;
+        }
+    img.left  {
+        float: left;
+        margin: 8px;
+    } 
+    section ul {
+        list-style-type:none;
+    }
+    section h4 {
+        border-bottom:1px red solid;
+        margin: 20px;
+        font-weight: 500;
+        font-size:20px;
+    }
+    main section  img:hover {   
+        opacity: 0.7;
+    }
+
+}
+@media only all and (max-width: 600px) {
+    header  nav{   
+        flex-direction: column;
+    }
+
+    .list {
+    flex-direction: column;
+    }
+
+    .container > li {
+    flex: 1 1 50%;
+    }
+}
+        /*foot style*/
 footer {
     border-radius: 2px;
     position: sticky;
@@ -182,6 +250,8 @@ footer li {
     top: 0; 
     bottom: 6px; 
 }
+
+
 .dropbtn {    
     background-color: #4CAF50;    
     color: white;   
